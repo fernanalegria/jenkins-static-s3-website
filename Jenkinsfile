@@ -18,9 +18,8 @@ pipeline {
          }
          stage('Up and running') {
             steps {
-                sleep(time: 10, unit: 'SECONDS') {
-                    sh 'curl -X GET "http://fernanalegria-static.s3-website.us-east-2.amazonaws.com/"'
-                }
+                sleep(time: 10, unit: 'SECONDS')
+                sh 'curl -X GET "http://fernanalegria-static.s3-website.us-east-2.amazonaws.com/"'
             }
          }
     }
