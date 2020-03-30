@@ -14,5 +14,10 @@ pipeline {
                   }
               }
          }
+         stage('Check the website is up and running') {
+             steps {
+                 sh 'curl -X GET "http://fernanalegria-static.s3-website.us-east-2.amazonaws.com/"'
+             }
+         }
     }
 }
